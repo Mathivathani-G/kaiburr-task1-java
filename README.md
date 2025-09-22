@@ -1,7 +1,7 @@
 # Kaiburr — Task 1: Java REST API (Task Manager)
 
-**Candidate**: Mathivathani  
-**Date**: 2025-09-21  
+**Name**: Mathivathani  
+**Date**: 21-09-2025  
 
 ---
 
