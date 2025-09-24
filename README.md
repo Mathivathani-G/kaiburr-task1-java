@@ -34,3 +34,42 @@ The API supports the following operations:
 ### 1. Start MongoDB (in Docker)
 ```bash
 docker run -d --name kaiburr-mongo -p 27017:27017 -v kaiburr_mongo_data:/data/db mongo:6.0
+```
+Build app:
+```bash
+mvn clean package -DskipTests
+```
+
+Run app:
+```bash
+java -Dspring.data.mongodb.uri=mongodb://localhost:27017/kaiburr -jar target/taskmanager-0.0.1-SNAPSHOT.jar
+```
+API base: http://localhost:8080/api/tasks
+
+API Examples (curl)
+Create task:
+```bash
+curl -X PUT http://localhost:8080/api/tasks \
+  -H "Content-Type: application/json" \
+  -d '{"id":"t1","name":"Check Date","owner":"Mathivathani","command":"date"}'
+```
+List:
+```bash
+curl http://localhost:8080/api/tasks
+```
+Get by id:
+```bash
+curl http://localhost:8080/api/tasks/t1
+```
+Search:
+```bash
+curl "http://localhost:8080/api/tasks/search?name=Date"
+```
+Execute:
+```bash
+curl -X PUT http://localhost:8080/api/tasks/t1/execute
+```
+Delete:
+```bash
+curl -i -X DELETE http://localhost:8080/api/tasks/t1
+```
