@@ -54,29 +54,43 @@ curl -X PUT http://localhost:8080/api/tasks \
   -H "Content-Type: application/json" \
   -d '{"id":"t1","name":"Check Date","owner":"Mathivathani","command":"date"}'
 ```
+**Task Created**
+![TASK CREATED](https://github.com/Mathivathani-G/kaiburr-task1-java/blob/main/screenshots/screenshots/JSON-Task%20Created.png)
 Execute:
 ```bash
 curl -X PUT http://localhost:8080/api/tasks/t1/execute
 ```
-![TASK CREATED](https://github.com/Mathivathani-G/kaiburr-task1-java/blob/main/screenshots/screenshots/JSON-Task%20Created.png)
+**Task Executed**
+![TASK EXECUTE](https://github.com/Mathivathani-G/kaiburr-task1-java/blob/main/screenshots/screenshots/Execute%20Task.jpeg)
 
 List:
 ```bash
 curl http://localhost:8080/api/tasks
 ```
-##Listing available Tasks (t1,t2)
-![List task](https://github.com/Mathivathani-G/kaiburr-task1-java/blob/main/screenshots/screenshots/LIST%20all%20Task.png)
+**Listing available Tasks (t1,t2)**
+![List task](https://github.com/Mathivathani-G/kaiburr-task1-java/blob/main/screenshots/screenshots/LIST%20all%20Task.jpeg)
 Get by id:
 ```bash
 curl http://localhost:8080/api/tasks/t1
 ```
+**GET task by ID**
+![Get Task By ID](https://github.com/Mathivathani-G/kaiburr-task1-java/blob/main/screenshots/screenshots/GET%20task%20by%20ID.jpeg)
+
 Search:
 ```bash
 curl "http://localhost:8080/api/tasks/search?name=Date"
 ```
-
+**SEARCH task by name**
+![Search by name](https://github.com/Mathivathani-G/kaiburr-task1-java/blob/main/screenshots/screenshots/Search%20by%20name.jpeg)
 Delete:
 ```bash
 curl -i -X DELETE http://localhost:8080/api/tasks/t1
 ```
+**TASK t1 Deleted**
+![Task delete](https://github.com/Mathivathani-G/kaiburr-task1-java/blob/main/screenshots/screenshots/DELETE%20task.jpeg)
 
+**MONGO DB Container**
+![MongoDB Container](https://github.com/Mathivathani-G/kaiburr-task1-java/blob/main/screenshots/screenshots/Mongo%20Container%20Running.png)
+
+**MongoDB Output**
+![MongoDB Container](https://github.com/Mathivathani-G/kaiburr-task1-java/blob/main/screenshots/screenshots/check%20in%20Mongo.png)
