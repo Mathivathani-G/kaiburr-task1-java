@@ -89,6 +89,39 @@ curl -i -X DELETE http://localhost:8080/api/tasks/t1
 **TASK t1 Deleted**
 ![Task delete](https://github.com/Mathivathani-G/kaiburr-task1-java/blob/main/screenshots/screenshots/DELETE%20task.jpeg)
 
+
+
+
+## Kaiburr — Task 4 : CI-CD Pipeline for Java REST API (Task Manager)
+## CI-CD Pipeline – Frontend
+
+This project uses **GitHub Actions** to implement a fully automated **CI/CD pipeline** for the React frontend.
+
+### Workflow
+
+1. **Trigger**: Workflow runs on every `push` or `pull request` to the `main` branch.
+2. **Steps**:
+   - **Checkout code** from GitHub.
+   - **Setup Node.js** environment.
+   - **Install dependencies** using `npm install`.
+   - **Build React app** using `npx vite build`.
+   - **Build Docker image** using the provided `Dockerfile`.
+   - **Run Docker container** to verify the frontend app.
+3. **Dockerfile**:
+   - Stage 1: Build React app (`npx vite build`).
+   - Stage 2: Serve app using Nginx on port `80`.
+
+### Outcome
+
+- Docker image for frontend is built automatically on every push.
+- Workflow status visible in GitHub Actions.
+- Frontend app can be run locally using:
+
+```bash
+docker build -t kaiburr-frontend:latest .
+docker run -p 3000:80 kaiburr-frontend:latest
+
+
 **MONGO DB Container**
 ![MongoDB Container](https://github.com/Mathivathani-G/kaiburr-task1-java/blob/main/screenshots/screenshots/Mongo%20Container%20Running.png)
 
