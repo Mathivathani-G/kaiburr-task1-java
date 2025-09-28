@@ -64,6 +64,8 @@ List:
 ```bash
 curl http://localhost:8080/api/tasks
 ```
+##Listing available Tasks (t1,t2)
+![List task](https://github.com/Mathivathani-G/kaiburr-task1-java/blob/main/screenshots/screenshots/LIST%20all%20Task.png)
 Get by id:
 ```bash
 curl http://localhost:8080/api/tasks/t1
@@ -72,10 +74,7 @@ Search:
 ```bash
 curl "http://localhost:8080/api/tasks/search?name=Date"
 ```
-Execute:
-```bash
-curl -X PUT http://localhost:8080/api/tasks/t1/execute
-```
+
 Delete:
 ```bash
 curl -i -X DELETE http://localhost:8080/api/tasks/t1
