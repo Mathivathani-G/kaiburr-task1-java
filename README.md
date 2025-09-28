@@ -54,6 +54,12 @@ curl -X PUT http://localhost:8080/api/tasks \
   -H "Content-Type: application/json" \
   -d '{"id":"t1","name":"Check Date","owner":"Mathivathani","command":"date"}'
 ```
+Execute:
+```bash
+curl -X PUT http://localhost:8080/api/tasks/t1/execute
+```
+![TASK CREATED](https://github.com/Mathivathani-G/kaiburr-task1-java/blob/main/screenshots/screenshots/JSON-Task%20Created.png)
+
 List:
 ```bash
 curl http://localhost:8080/api/tasks
@@ -74,4 +80,4 @@ Delete:
 ```bash
 curl -i -X DELETE http://localhost:8080/api/tasks/t1
 ```
-![TASK CREATED](https://github.com/Mathivathani-G/kaiburr-task1-java/blob/main/screenshots/screenshots/JSON-Task%20Created.png)
+
