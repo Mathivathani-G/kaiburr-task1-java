@@ -74,3 +74,4 @@ Delete:
 ```bash
 curl -i -X DELETE http://localhost:8080/api/tasks/t1
 ```
+![TASK CREATED](https://github.com/Mathivathani-G/kaiburr-task1-java/blob/main/screenshots/screenshots/JSON-Task%20Created.png)
