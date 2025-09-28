@@ -1,4 +1,5 @@
-# Kaiburr — Task 1: Java REST API (Task Manager)
+# Kaiburr - Task 1: Java REST API (Task Manager)
+# Kaiburr - Task 4: CI-CD pipeline for JAVA REST API Backend
 
 **Name**: Mathivathani G
 
@@ -118,32 +119,32 @@ curl -i -X DELETE http://localhost:8080/api/tasks/t1
 
 
 
-## Kaiburr — Task 4 : CI-CD Pipeline for Java REST API (Task Manager)
-## CI-CD Pipeline – Frontend
+---
 
-This project uses **GitHub Actions** to implement a fully automated **CI/CD pipeline** for the React frontend.
+# **Task 4 - CI-CD pipeline for Backend (Java Spring Boot)**
+## CI/CD Pipeline - Backend
+
+This project uses **GitHub Actions** to implement a fully automated **CI/CD pipeline** for the Java backend.
 
 ### Workflow
 
 1. **Trigger**: Workflow runs on every `push` or `pull request` to the `main` branch.
 2. **Steps**:
    - **Checkout code** from GitHub.
-   - **Setup Node.js** environment.
-   - **Install dependencies** using `npm install`.
-   - **Build React app** using `npx vite build`.
+   - **Build Java project** using Maven (`mvn clean package`) → produces `.jar`.
    - **Build Docker image** using the provided `Dockerfile`.
-   - **Run Docker container** to verify the frontend app.
+   - **Run Docker container** to verify the backend API.
 3. **Dockerfile**:
-   - Stage 1: Build React app (`npx vite build`).
-   - Stage 2: Serve app using Nginx on port `80`.
+   - Uses `openjdk:17` base image.
+   - Copies the built `.jar` file.
+   - Exposes port `8080`.
 
 ### Outcome
 
-- Docker image for frontend is built automatically on every push.
+- Docker image for backend is built automatically on every push.
 - Workflow status visible in GitHub Actions.
-- Frontend app can be run locally using:
+- Backend app can be run locally using:
 
 ```bash
-docker build -t kaiburr-frontend:latest .
-docker run -p 3000:80 kaiburr-frontend:latest
-```
+docker build -t kaiburr-backend:latest .
+docker run -p 8080:8080 kaiburr-backend:latest
